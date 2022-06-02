@@ -195,6 +195,14 @@ namespace gd {
 				)(lvl);
 			}
 
+			float timeForXPos2(float x, bool idk) {
+				float value;
+				__asm movss xmm1, x;
+				reinterpret_cast<void(__thiscall*)(PlayLayer*, bool)>(base + 0x208800)(this, idk);
+				__asm movss value, xmm0
+				return value;
+			}
+
 			void togglePracticeMode(bool on) {
 				reinterpret_cast<void(__thiscall*)(PlayLayer*, bool)>(
 					base + 0x20d0d0
