@@ -30,6 +30,9 @@ namespace gd {
 		void followObject(cocos2d::CCNode* obj, bool unk) {
 			reinterpret_cast<void(__thiscall*)(CCCircleWave*, CCNode*, bool)>(base + 0x16f20)(this, obj, unk);
 		}
+		void idk(cocos2d::CCPoint* unk) {
+			reinterpret_cast<void(__thiscall*)(CCCircleWave*, cocos2d::CCPoint*)>(base + 0x16ed0)(this, unk);
+		}
 	};
 	#pragma runtime_checks("s", restore)
 }

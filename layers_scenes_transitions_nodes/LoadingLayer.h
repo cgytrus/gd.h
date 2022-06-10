@@ -25,6 +25,10 @@ namespace gd {
 		void setFromRefresh(bool value) {
 			m_bFromRefresh = value;
 		}
+		// idk if the name is right but idc
+		void openMenuLayer() {
+			return reinterpret_cast<void (__thiscall*)(LoadingLayer*)>(base + 0x18c790)(this);
+		}
 	};
 }
 
