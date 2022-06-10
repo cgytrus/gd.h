@@ -157,7 +157,7 @@ namespace gd {
 		void setPlayerGlow(bool v) { m_bPlayerGlow = v; }
 		void setPlayerIconType(IconType v) { m_nPlayerIconType = v; }
 
-		#undef FUCK_THIS
+		#undef PLAYER_ICON_FUNC
 		
 		bool isColorUnlocked(int _id, bool _type) {
 			return reinterpret_cast<bool(__thiscall*)(
