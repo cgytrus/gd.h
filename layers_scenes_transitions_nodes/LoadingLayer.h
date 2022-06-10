@@ -13,7 +13,7 @@ namespace gd {
 		//artifacts of rob debugging something
 		cocos2d::CCSprite* m_pSliderBar;
 		float m_fSliderGrooveXPos;
-		PAD(4);
+		float m_fSliderHeight;
 		bool m_bFromRefresh;
 
 	public:
