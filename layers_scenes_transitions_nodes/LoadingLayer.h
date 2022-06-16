@@ -5,18 +5,17 @@
 
 namespace gd {
 	class GDH_DLL LoadingLayer : public cocos2d::CCLayer {
-	protected:
-		PAD(4);
-		int m_nLoadIndex;
+	public:
+		bool unk11C;
+		bool unk11D;
+		int m_nLoadStep;
 		cocos2d::CCLabelBMFont* m_pCaption;
-		PAD(4);
-		//artifacts of rob debugging something
+		TextArea* m_pTextArea;
 		cocos2d::CCSprite* m_pSliderBar;
 		float m_fSliderGrooveXPos;
-		float m_fSliderHeight;
+		float m_fSliderGrooveHeight;
 		bool m_bFromRefresh;
 
-	public:
 		static LoadingLayer* create(bool fromReload) {
 			return reinterpret_cast<LoadingLayer* (__fastcall*)(bool)>(
 				base + 0x18BFE0
