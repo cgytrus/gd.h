@@ -4,6 +4,8 @@
 #include <gd.h>
 
 namespace gd {
+	class TextArea;
+
 	class GDH_DLL LoadingLayer : public cocos2d::CCLayer {
 	public:
 		bool unk11C;
