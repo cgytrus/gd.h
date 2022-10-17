@@ -153,11 +153,10 @@ namespace gd {
 		bool m_bIsDontEnter; //0x36B
 		bool m_bIsDontFade; //0x36C
 		int m_nDefaultZOrder; // 0x370
-		PAD(23);
+		PAD(24);
 		bool m_unk38C;
 		bool m_unk38D;
 		bool m_unk38E;
-		PAD(1);
 		float m_unk390;
 		PAD(20);
 		GJSpriteColor* m_pBaseColor; //0x3A8
