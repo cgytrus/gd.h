@@ -5,7 +5,9 @@
 
 namespace gd {
     class GDH_DLL ColorActionSprite : public cocos2d::CCNode {
-
+        float m_opacity;
+        cocos2d::ccColor3B m_f0124;
+        cocos2d::ccColor3B m_activeColor;
     };
 }
 
