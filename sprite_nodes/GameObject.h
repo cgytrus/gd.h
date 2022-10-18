@@ -79,10 +79,10 @@ namespace gd {
 		bool m_bEditor;	// 0x21d
 		bool m_bGroupDisabled;	// 0x21e
 		bool m_bColourOnTop;	// 0x21f
-		GJSpriteColor* m_pMainColourMode;		// 0x220
-		GJSpriteColor* m_pSecondaryColourMode;	// 0x224
-		bool m_bCol1;	// 0x228
-		bool m_bCol2;	// 0x229
+		int m_baseColorID;		// 0x220
+		int m_detailColorID;	// 0x224
+		bool m_baseColorHSVModified;	// 0x228
+		bool m_detailColorHSVModified;	// 0x229
 		cocos2d::CCPoint m_obStartPosOffset; //0x22C
 		float m_fUnkRotationField;	// 0x234
 		bool m_bTintTrigger;	// 0x238
