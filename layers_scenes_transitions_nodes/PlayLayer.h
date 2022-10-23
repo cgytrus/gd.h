@@ -55,11 +55,11 @@ namespace gd {
 			unsigned int unk2D8;
 			bool unk2DC;
 			bool m_bHasCheated; // 0x2DD by taking less than 30s to beat lvl
-			int unk2E0; // random value between 0 and 100 + unk2E8
-			int unk2E4; // random value between 0 and 100
+			int m_dontSaveRand; // random value between 0 and 100 + unk2E8
+			int m_dontSaveSeed; // random value between 0 and 100
 			int unk2E8;
-			bool unk2EC; // opposite of isFrozen
-			bool unk2ED;
+			bool m_debugPauseOff; // opposite of isFrozen
+			bool m_shouldSmoothCamera;
 			PAD(10);
 			cocos2d::CCDrawNode* unk2F8;
 			float unk2FC; // seems to be camera y
@@ -82,7 +82,7 @@ namespace gd {
 			PAD(8);
 			cocos2d::CCArray* unk354;
 			cocos2d::CCArray* unk358;
-			cocos2d::CCArray* unk35C;
+			cocos2d::CCArray* m_objectsToUpdate;
 			cocos2d::CCArray* unk360;
 			bool m_isMute; // 0x364 has to do with fmod
 			PAD(7);
@@ -111,8 +111,11 @@ namespace gd {
 			float m_currentShakeStrength; // 0x3C8
 			float m_currentShakeInterval; // 0x3CC
 			double m_lastShakeTime; // 0x3D0
-			cocos2d::CCPoint unk3D8;
-			PAD(16);
+			cocos2d::CCPoint m_cameraShakeOffset;
+			bool unk3E0;
+			float m_backgroundScrollOffset;
+			float m_cameraFlip;
+			bool unk3EC;
 			int unk3F0; // always 40
 			cocos2d::CCDictionary* m_particleSystemsPlist; // 0x3F4 i really need a better name	 
 			cocos2d::CCDictionary* unk3F8;
@@ -135,14 +138,16 @@ namespace gd {
 			std::string m_previousRecords; // 0x430
 			PAD(8);
 			double m_time; // 0x450
-			PAD(9);
+			int unknown6b8;
+			int unknown6bc;
+			bool unk460;
 			bool unk461;
 			cocos2d::CCDictionary* unk464;
-			PAD(8);
+			std::map<short, bool> m_hasColors;
 			bool m_isPlaybackMode; // 0x470
 			PAD(11);
 			bool m_isFlipped; // 0x47C
-			PAD(7);
+			float m_mirrorTransition; // 0x480
 			UILayer* m_uiLayer; // 0x484
 			GJGameLevel* m_level; // 0x488
 			float m_cameraX; // 0x48C
@@ -207,6 +212,10 @@ namespace gd {
 				reinterpret_cast<void(__thiscall*)(PlayLayer*, bool)>(
 					base + 0x20d0d0
 				)(this, on);
+			}
+
+			void applyEnterEffect(GameObject* obj) {
+				reinterpret_cast<void(__thiscall*)(PlayLayer*, GameObject*)>(base + 0x206880)(this, obj);
 			}
 	};
 }

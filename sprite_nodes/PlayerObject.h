@@ -14,12 +14,16 @@ namespace gd {
 
 	class GDH_DLL PlayerObject : public GameObject, public AnimatedSpriteDelegate {
 	public:
-		PAD(24);
+		float unk46c;
+		PAD(16);
 		bool unk480;
 		cocos2d::CCNode* unk484;
 		cocos2d::CCDictionary* m_pCollisionLog; // 0x488
 		cocos2d::CCDictionary* m_pCollisionLog1; // 0x48C
-		PAD(32);
+		PAD(4);
+		float m_autoCheckpointAccelMult;
+		bool m_quickCheckpointMode;
+		PAD(23);
 		bool unk4B0;
 		cocos2d::CCSprite* unk4B4;
 		PAD(28);
@@ -44,23 +48,27 @@ namespace gd {
 		double m_xAccel; // 0x518
 		double m_jumpAccel; // 0x520
 		double m_gravity; // 0x528
-		PAD(16);
+		PAD(8);
 		bool unk538;
 		bool unk539;
 		bool unk53A;
-		bool unk53B;
+		bool m_jumpedForAutoCheckpoint; // 0x53b
 		bool m_isInPlayLayer; // 0x53C
 		bool unk53D;
 		bool unk53E; // is holding on ship idk
 		bool unk53F;
-		PAD(16);
+		bool m_autoCheckpointTimeout; // 0x540
+		PAD(7);
+		double m_autoCheckpointTimeoutTime; // 0x548
 		double m_lastJumpTime; // 0x550
 		double unk558;
-		PAD(36);
+		double unk560;
+		PAD(28);
 		float unk584;
 		PAD(20);
 		GameObject* unk59C;
-		PAD(8);
+		CheckpointObject* m_pendingCheckpoint; // 0x5a0
+		int m_autoCheckpointsFrameCount; // 0x5a4
 		GJRobotSprite* m_pRobot; //0x5A8
 		GJSpiderSprite* m_pSpider; //0x5AC
 		bool unk5B0;
@@ -81,7 +89,9 @@ namespace gd {
 		bool unk5FC;
 		bool unk5FD;
 		bool unk5FE;
-		PAD(17);
+		PAD(10);
+		bool m_landedForAutoCheckpoint; // 0x609
+		PAD(6);
 		bool unk610;
 		bool m_isHolding; // 0x611
 		bool m_hasJustHeld; // 0x612
@@ -102,7 +112,7 @@ namespace gd {
 		bool m_isRobot; // 0x63C
 		bool m_isSpider; // 0x63D
 		bool m_isUpsideDown; // 0x63E
-		PAD(1);
+		bool m_isDead; // 0x63f
 		bool m_isOnGround; // 0x640
 		bool m_isDashing; // 0x641
 		float m_vehicleSize; // 0x644
@@ -122,7 +132,8 @@ namespace gd {
 		bool unk684;
 		bool unk685;
 		double unk688;
-		PAD(8);
+		PAD(4);
+		float unk694;
 		float m_groundHeight; // 0x698
 		float unk69C; // seems to be y vel, cant directly change it though
 		PAD(4);

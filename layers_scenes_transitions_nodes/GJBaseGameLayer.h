@@ -102,18 +102,18 @@ namespace gd {
 		std::vector<void*> unk280;
 		std::vector<void*> unk28C;
 		cocos2d::CCArray* unk298;
-		cocos2d::CCArray* unk29C;
+		cocos2d::CCArray* m_processedGroups;
 		cocos2d::CCDictionary* unk2A0;
 		cocos2d::CCDictionary* unk2A4;
-		bool m_bDidUpdateNormalCapacity; // 0x2A8 
-		bool m_bIsDualMode; // 0x2A9 
+		bool m_bDidUpdateNormalCapacity; // 0x2A8
+		bool m_bIsDualMode; // 0x2A9
 		int unk2AC;
 		bool unk2B0;
-		int m_nAttemptClickCount; // 0x2B4 
-		int m_nCurrectSection; // 0x2B8 
-		int unk2BC; // probably what section gd has loaded up to
-		bool unk2C0;
-		bool unk2C1;
+		int m_nAttemptClickCount; // 0x2B4
+		int m_firstVisibleSection; // 0x2B8
+		int m_lastVisibleSection; // 0x2BC
+		bool m_objectsAreDisabled; // 0x2C0
+		bool m_blending; // 0x2C1
 		PAD(10); // this should be 10 but im too lazy to fix playlayer rn
 
 		cocos2d::CCLayer* getObjectLayer() { return m_pObjectLayer; }
