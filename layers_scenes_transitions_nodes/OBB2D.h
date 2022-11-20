@@ -4,11 +4,28 @@
 #include <gd.h>
 
 namespace gd {
-    
     class OBB2D : public cocos2d::CCNode {
-        // todo
-    };
+    public:
+        cocos2d::CCPoint m_p1_1;
+        cocos2d::CCPoint m_p1_2;
+        cocos2d::CCPoint m_p1_3;
+        cocos2d::CCPoint m_p1_4;
+        cocos2d::CCPoint m_p2_1;
+        cocos2d::CCPoint m_p2_2;
+        cocos2d::CCPoint m_p2_3;
+        cocos2d::CCPoint m_p2_4;
+        cocos2d::CCPoint m_p3_1;
+        cocos2d::CCPoint m_p3_2;
+        cocos2d::CCPoint m_p3_3;
+        cocos2d::CCPoint m_p3_4;
+        double m_rot1;
+        double m_rot2;
+        cocos2d::CCPoint m_center;
 
+        cocos2d::CCRect getBoundingRect() {
+            return reinterpret_cast<cocos2d::CCRect(__fastcall*)(OBB2D*)>(base + 0x2c140)(this);
+        }
+    };
 }
 
 #endif
