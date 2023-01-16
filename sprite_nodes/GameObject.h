@@ -214,12 +214,12 @@ namespace gd {
 		PAD(6);
 		bool m_isAnimated; // 0x434
 		PAD(7);
-		bool m_isEffect; // 0x43c
+		bool m_hasEffectLine; // 0x43c
 		bool m_specialUnk43d;
 		PAD(1);
-		bool m_specialUnk43f;
+		bool m_hasDurationLine; // 0x43f
 		bool m_isTriggerable; // 0x440
-		bool m_specialUnk441;
+		bool m_triggeredInEditor; // 0x441
 		PAD(6);
 		bool m_bHighDetail; //0x448
 		PAD(3);
