@@ -166,7 +166,8 @@ namespace gd {
 		bool m_bIsDontEnter; //0x36B
 		bool m_bIsDontFade; //0x36C
 		int m_nDefaultZOrder; // 0x370
-		PAD(2);
+		bool m_unk374;
+		bool m_unk375;
 		bool m_customAudioScale; // 0x376
 		PAD(1);
 		float m_minAudioScale; // 0x378
@@ -212,9 +213,14 @@ namespace gd {
 		bool m_unk42D;
 		PAD(6);
 		bool m_isAnimated; // 0x434
-		PAD(11);
-		bool m_isTriggerable; // 0x440
 		PAD(7);
+		bool m_isEffect; // 0x43c
+		bool m_specialUnk43d;
+		PAD(1);
+		bool m_specialUnk43f;
+		bool m_isTriggerable; // 0x440
+		bool m_specialUnk441;
+		PAD(6);
 		bool m_bHighDetail; //0x448
 		PAD(3);
 		ColorActionSprite* m_pColorActionSprite1; //0x44C
