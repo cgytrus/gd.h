@@ -8,6 +8,7 @@ namespace gd {
     class GJBaseGameLayer;
     class EditorUI;
     class GameObject;
+    class EffectGameObject;
     class GJGroundLayer;
     class DrawGridLayer;
 
@@ -159,6 +160,10 @@ namespace gd {
             reinterpret_cast<void(__thiscall*)(LevelEditorLayer*, GameObject*)>(
                 base + 0x162650
             )(this, obj);
+        }
+
+        EffectGameObject* resetEffectTriggerOptim(EffectGameObject* object, cocos2d::CCArray* objects) {
+            return reinterpret_cast<EffectGameObject*(__thiscall*)(LevelEditorLayer*, EffectGameObject*, cocos2d::CCArray*)>(base + 0x167e00)(this, object, objects);
         }
     };
 
