@@ -140,6 +140,7 @@ enum FMOD_RESULT;
 #include "sprite_nodes/ColorChannelSprite.h"
 #include "sprite_nodes/TeleportPortalObject.h"
 
+#include "trigger_popups/EditTriggersPopup.h"
 #include "trigger_popups/SetupPickupTriggerPopup.h"
 
 #include "cell_nodes/GJComment.h"
