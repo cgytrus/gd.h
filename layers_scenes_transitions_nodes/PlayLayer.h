@@ -75,8 +75,8 @@ namespace gd {
 			CheckpointObject* unk330;
 			EndPortalObject* m_endPortal; // 0x334
 			cocos2d::CCArray* m_checkpoints; // 0x338
-			cocos2d::CCArray* unk33C;
-			cocos2d::CCArray* unk340;
+			cocos2d::CCArray* m_hitSpeedObjects; // 0x33c
+			cocos2d::CCArray* m_speedObjects; // 0x340
 			cocos2d::CCArray* unk344;
 			cocos2d::CCSprite* unk348;
 			PAD(8);
@@ -102,7 +102,8 @@ namespace gd {
 			bool unk39F; // set to true when cameraMoveY is called
 			PAD(4);
 			int unk3A4;
-			PAD(12);
+			PAD(8);
+			float m_playerSpeed; // 0x3b0
 			float m_levelLength; // 0x3B4
 			float unk3B8;
 			cocos2d::CCLabelBMFont* m_attemptLabel; // 0x3BC
@@ -216,6 +217,14 @@ namespace gd {
 
 			void applyEnterEffect(GameObject* obj) {
 				reinterpret_cast<void(__thiscall*)(PlayLayer*, GameObject*)>(base + 0x206880)(this, obj);
+			}
+
+			void addToSpeedObjects(GameObject* object) {
+				reinterpret_cast<void(__thiscall*)(PlayLayer*, GameObject*)>(base + 0x208730)(this, object);
+			}
+
+			void playSpeedParticle() {
+				reinterpret_cast<void(__thiscall*)(PlayLayer*)>(base + 0x201130)(this);
 			}
 	};
 }

@@ -38,7 +38,8 @@ namespace gd {
         bool m_bHighDetail;   // 0x2dc
         PAD(0x33)
         GameObject* m_pCopyStateObject; // 0x310
-        PAD(0x40)
+        PAD(60)
+        float m_playerSpeed; // 0x350
         int m_nCurrentLayer;    // 0x354
         PAD(0x28)
         EditorUI* m_pEditorUI;  // 0x380

@@ -33,12 +33,18 @@ namespace gd {
             float m_fFastestGuidelineSpacing;   // 0x190
             bool m_pUpdatingTimeMarkers;    // 0x194
             bool m_bTimeNeedsUpdate;        // 0x195
-            float m_fActiveGridNodeSize;    // 0x198
+            PAD(3);
+            bool m_unk199;
+            float m_fActiveGridNodeSize;    // 0x19c
 
             void draw() override {
                 reinterpret_cast<void(__thiscall*)(DrawGridLayer*)>(
                     base + 0x16ce90
                 )(this);
+            }
+
+            void addToSpeedObjects(GameObject* object) {
+                reinterpret_cast<void(__thiscall*)(DrawGridLayer*, GameObject*)>(base + 0x16c6e0)(this, object);
             }
     };
 

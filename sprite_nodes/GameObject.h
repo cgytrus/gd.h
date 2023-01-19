@@ -391,6 +391,9 @@ namespace gd {
 		void selectObject(const cocos2d::ccColor3B& color = { 0, 255, 0 }) {
 			reinterpret_cast<void(__thiscall*)(GameObject*, const cocos2d::ccColor3B)>(base + 0xee960)(this, color);
 		}
+		cocos2d::CCRect* getObjectRect() {
+			return (*reinterpret_cast<cocos2d::CCRect*(__thiscall**)(GameObject*)>(*reinterpret_cast<uintptr_t*>(this) + 0x234))(this);
+		}
 		cocos2d::CCRect* getObjectTextureRect() {
 			return (*reinterpret_cast<cocos2d::CCRect*(__thiscall**)(GameObject*)>(*reinterpret_cast<uintptr_t*>(this) + 0x23c))(this);
 		}

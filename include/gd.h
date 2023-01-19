@@ -152,6 +152,7 @@ enum FMOD_RESULT;
 #include "other_nodes/PointNode.h"
 #include "other_nodes/UndoObject.h"
 #include "other_nodes/DialogObject.h"
+#include "other_nodes/SpeedObject.h"
 
 
 #include "GameToolbox.h"

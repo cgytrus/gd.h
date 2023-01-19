@@ -26,7 +26,9 @@ namespace gd {
 		PAD(23);
 		bool unk4B0;
 		cocos2d::CCSprite* unk4B4;
-		PAD(28);
+		PAD(8);
+		bool m_unk4c0;
+		PAD(19);
 		bool unk4D4;
 		cocos2d::CCArray* m_particleSystems; // 0x4D8
 		bool unk4DC;
@@ -45,7 +47,7 @@ namespace gd {
 		cocos2d::CCSprite* unk50C;
 		cocos2d::CCMotionStreak* m_regularTrail; // 0x510
 		HardStreak* m_waveTrail; // 0x514
-		double m_xAccel; // 0x518
+		double m_xVelocity; // 0x518
 		double m_jumpAccel; // 0x520
 		double m_gravity; // 0x528
 		PAD(8);
@@ -177,6 +179,9 @@ namespace gd {
 		}
 		void activateStreak() {
 			reinterpret_cast<void(__thiscall*)(PlayerObject*)>(base + 0x1f9080)(this);
+		}
+		void updateRobotAnimationSpeed() {
+			reinterpret_cast<void(__thiscall*)(PlayerObject*)>(base + 0x1f9b80)(this);
 		}
 	};
 }
