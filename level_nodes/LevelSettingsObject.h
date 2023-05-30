@@ -33,9 +33,8 @@ namespace gd {
             bool m_bMiniMode; // 0xf8
             bool m_bTwoPlayerMode;  // 0xf9
             float m_songOffset; // 0xfc
-            PAD(19);
+            PAD(17);
             bool m_bFlipped; // 0x111
-            PAD(2);
             GJGameLevel* m_pLevel;  // 0x114
             std::string m_sUnknownStr1; // 0x118
 
