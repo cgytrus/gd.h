@@ -32,7 +32,8 @@ namespace gd {
             Speed m_speed; // 0xf4
             bool m_bMiniMode; // 0xf8
             bool m_bTwoPlayerMode;  // 0xf9
-            PAD(23);
+            float m_songOffset; // 0xfc
+            PAD(19);
             bool m_bFlipped; // 0x111
             PAD(2);
             GJGameLevel* m_pLevel;  // 0x114
