@@ -74,16 +74,16 @@ namespace gd {
 		GJRobotSprite* m_pRobot; //0x5A8
 		GJSpiderSprite* m_pSpider; //0x5AC
 		bool unk5B0;
-		cocos2d::CCParticleSystemQuad* unk5B4;
-		cocos2d::CCParticleSystemQuad* unk5B8;
-		cocos2d::CCParticleSystemQuad* unk5BC;
-		cocos2d::CCParticleSystemQuad* unk5C0;
-		cocos2d::CCParticleSystemQuad* unk5C4;
-		cocos2d::CCParticleSystemQuad* unk5C8;
-		cocos2d::CCParticleSystemQuad* unk5CC;
+		cocos2d::CCParticleSystemQuad* m_playerGroundParticles;
+		cocos2d::CCParticleSystemQuad* m_unknownGroundParticles;
+		cocos2d::CCParticleSystemQuad* m_shipGroundParticles;
+		cocos2d::CCParticleSystemQuad* m_vehicleGroundParticles;
+		cocos2d::CCParticleSystemQuad* m_ufoJumpParticles;
+		cocos2d::CCParticleSystemQuad* m_robotJumpParticles;
+		cocos2d::CCParticleSystemQuad* m_dashParticles;
 		PAD(4);
-		cocos2d::CCParticleSystemQuad* unk5D4;
-		cocos2d::CCParticleSystemQuad* unk5D8;
+		cocos2d::CCParticleSystemQuad* m_landParticles0;
+		cocos2d::CCParticleSystemQuad* m_landParticles1;
 		PAD(8);
 		int m_nStreakID;	// 0x5e4
 		float m_fWellIdk;	// 0x5e8
